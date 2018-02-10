@@ -109,14 +109,14 @@ h1 {
     display: inline-block;
 }
 .navigation a {
-    background: #2eb9c3;
+    background: #217153;
     color: #fff;
     font-size: 15px;
     padding: 12px 20px;
     text-decoration: none;
 }
 .navigation a:hover {
-    color: #136065;
+    color: #61d293;
     text-decoration: none;
 }
 
