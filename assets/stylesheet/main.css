@@ -74,7 +74,6 @@ h1 {
 *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -box-sizing: border-box;
 }
 .container {
     margin: 0 auto;
@@ -103,7 +102,7 @@ h1 {
 .navigation ul {
 	float: right;
     font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: 45px 0px 30px 30px;
+    margin: 45px 0 30px 30px;
 }
 .navigation li {
     display: inline-block;
@@ -125,7 +124,7 @@ h1 {
  */
 .info {
     float: right;
-    margin: 50px 0 0 0;
+    margin-top: 50px;
 	width: 150px;
 }
 .unit {
@@ -168,11 +167,18 @@ h1 {
 	text-align: left;
 }
 .list {
-	font-size: 20px;
+	font-size: 15px;
 	height: 330px;
 	margin-top: 30px;
 	text-align: right;
 	width: 100%;
+}
+td {
+  border-top: 1px solid #dfe2e5;
+  padding-top: 15px;
+}
+th, td {
+  padding-bottom: 15px;
 }
  
  /*
