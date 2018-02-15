@@ -51,8 +51,8 @@ table {
  */
 h1 {
     float: left;
-	color: #001f7c;
-	font-size: 50px;
+    color: #001f7c;
+    font-size: 50px;
     line-height: 40px;
     margin-bottom: 25px;
     padding-top: 75px;
@@ -117,20 +117,20 @@ h1 {
 .info {
     float: right;
     margin-top: 50px;
-	width: 150px;
+    width: 150px;
 }
 .unit {
-	color: #2d5978;
-	font-size: 11px;
+    color: #2d5978;
+    font-size: 11px;
 }
 .slot {
-	font-size: 12px;
-	height: 50px;
-	text-align: center;
-	width: 60%;
+    font-size: 12px;
+    height: 50px;
+    text-align: center;
+    width: 60%;
 }
-.temp img {	
-	width: 60px;
+.temp img {
+    width: 60px;
 }
 .size {
     font-size: 60px;
@@ -157,13 +157,13 @@ h1 {
     Таблиця
  */
 .head {
-	text-align: left;
+    text-align: left;
 }
 .list {
-	font-size: 15px;
-	height: 330px;
+    font-size: 15px;
+    height: 330px;
     text-align: center;
-	width: 100%;
+    width: 100%;
 }
 td {
     padding: 15px 15px 0 0;
@@ -196,22 +196,22 @@ h1, h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ul, tr {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*
    Вкладки
 */
 #tabsContent {
-	height: 380px;
-	width: 100%;
-	overflow: hidden;
+    height: 380px;
+    width: 100%;
+    overflow: hidden;
     margin-bottom: 40px;
 }
 #tabsContent>table {
-  	background: none;
-	height: 380px;
-	width: 100%;
+    background: none;
+    height: 380px;
+    width: 100%;
 }
 
 /*
