@@ -46,29 +46,21 @@ table {
     border-spacing: 0;
 }
 
-
 /*
     Логотип
  */
 h1 {
+    float: left;
 	color: #001f7c;
 	font-size: 50px;
-    left: 50px;
     line-height: 40px;
     margin-bottom: 25px;
-	position: absolute;
-	top: 75px;
-	width: 100%;
-}
-.image {
-	float: left;
-    position: relative;
-    width: 292px;
+    padding-top: 75px;
 }
 
 /*
     Сітка
- */
+ *//*
 *,
 *:before,
 *:after {
@@ -78,7 +70,7 @@ h1 {
 .container {
     margin: 0 auto;
     width: 960px;
-}
+}*/
 
 /*
    Clearfix
@@ -108,14 +100,14 @@ h1 {
     display: inline-block;
 }
 .navigation a {
-    background: #217153;
+    background: #5e7170;
     color: #fff;
     font-size: 15px;
     padding: 12px 20px;
     text-decoration: none;
 }
 .navigation a:hover {
-    color: #61d293;
+    color: #444c4b;
     text-decoration: none;
 }
 
@@ -141,23 +133,24 @@ h1 {
 	width: 60px;
 }
 .size {
-	font-size: 60px;
+    font-size: 60px;
 }
-
 
 /*
     Пошук
  */
 .form {
-    margin: 200px 0 10px 0;
+    float: left;
+    margin: 130px 0 10px 70px;
     text-align: left;
 }
 .cityName {
     float: left;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 700;
     letter-spacing: normal;
     padding: 40px 5px 20px 5px;
+    color: #fff;
 }
 
 /*
@@ -169,41 +162,65 @@ h1 {
 .list {
 	font-size: 15px;
 	height: 330px;
-	margin-top: 30px;
-	text-align: right;
+    text-align: center;
 	width: 100%;
 }
 td {
-  border-top: 1px solid #dfe2e5;
-  padding-top: 15px;
+    padding: 15px 15px 0 0;
 }
 th, td {
-  padding-bottom: 15px;
-}
- 
- /*
-    Тіло
- */
-article {
-    background: -webkit-linear-gradient(to right, #b4ffbd, #33ff87);
-    background: -moz-linear-gradient(to right, #b4ffbd, #33ff87);
-    background: linear-gradient(to right, #b4ffbd, #16bf60);
+    color: #ffffff;
+    padding-bottom: 15px;
 }
 
 /*
     Футер
  */
 footer {
-    padding-top: 100px;
+    padding-top: 10px;
     text-align: center;
 }
+.minInfo {
+    float: right;
+}
+.rights {
+    float: left;
+    padding-top: 50px;
+    color: #000;
+}
 
-/*
-   Типографіка
-*/
+    /*
+       Типографіка
+    */
 h1, h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 ul, tr {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+   Вкладки
+*/
+#tabsContent {
+	height: 380px;
+	width: 100%;
+	overflow: hidden;
+    margin-bottom: 40px;
+}
+#tabsContent>table {
+  	background: none;
+	height: 380px;
+	width: 100%;
+}
+
+/*
+   Background
+ */
+body {
+    background: url("../images/new_zealand.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
