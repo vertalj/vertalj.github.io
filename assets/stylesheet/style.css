@@ -51,34 +51,34 @@ table {
  */
 h1 {
     float: left;
-    color: #001f7c !important;
-    font-size: 50px !important;
+	 color: #001f7c !important;
+	 font-size: 50px !important;
     line-height: 40px;
     margin-bottom: 25px;
-    position: relative;
+	 position: relative;
 }
 .size {
     font-size: 50px;
 }
 .temp {
-    margin-top: -30px;
+	margin-top: -30px;
 }
-.temp img {
-    width: 60px;
-    margin-top: -60px;
+.temp img {	
+	width: 60px;
+	margin-top: -60px;
 }
 .unit {
-    color: #2d5978;
-    font-size: 11px;
+	color: #2d5978;
+	font-size: 11px;
 }
 .slot {
-    font-size: 12px;
-    height: 50px;
-    text-align: center;
-    width: 60%;
+	font-size: 12px;
+	height: 50px;
+	text-align: center;
+	width: 60%;
 }
 .card-header {
-    background-color: rgba(198, 198, 198, 0.49) !important;
+	background-color: rgba(198, 198, 198, 0.49) !important;
 }
 
 /*
@@ -89,53 +89,46 @@ a.active {
     background-color:  rgba(198, 198, 198, 0.49) !important;
 }
 a {
-    color: #2d2d2d !important;
-    border-bottom: 1px solid  rgba(198, 198, 198, 0.49) !important;
-}
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
-    border-color: rgba(198, 198, 198, 0.49) !important;
-}
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-    border-color: rgba(198, 198, 198, 0.49) !important;
+	color: #2d2d2d !important;
+	border-bottom: 1px solid  rgba(198, 198, 198, 0.49) !important;
 }
 .nav-tabs {
-    border-bottom: 1px solid rgba(198, 198, 198, 0.49) !important;
+    border-bottom: none !important;
 }
 
 /*
    Тіло
 */
-.tab-content th, .tab-content td {
-    padding: 1rem 2.4rem !important;
-}
 .card-body {
-    padding: 0.75rem 1.25rem;
-    background-color:  rgba(198, 198, 198, 0.49);
+  background-color:  rgba(198, 198, 198, 0.49) !important;
 }
 .mynav {
-    padding-top: 40px;
+	padding-top: 40px;
 }
 h5 {
     float: left;
-    padding-top: 50px;
+	padding-top: 50px;
 }
 th, td {
     color: #000;
+	text-align: center;
+}
+.noborder {
+    border-top: none !important;
 }
 
 /*
    Футер
 */
 footer {
-    padding-top: 65px;
-    height: 60px !important;
+	padding-top: 80px;
+	height: 80px !important;
 }
 .rights {
-    padding-top: 30px;
+	padding-top: 30px;
 }
 .card-footer {
-    background-color:  rgba(198, 198, 198, 0.49) !important;
+	background-color:  rgba(198, 198, 198, 0.49) !important;
 }
 
 /*
