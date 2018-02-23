@@ -1,11 +1,11 @@
 function getXHR(){
-    var xhrobj;
-    if (window.XMLHttpRequest){
-        xhrobj = new XMLHttpRequest();
-    } else {
-        xhrobj = new ActiveXObject('Microsoft.XMLHTTP');
-    }
-    return xhrobj;
+	var xhrobj;
+	if (window.XMLHttpRequest){
+		xhrobj = new XMLHttpRequest();
+	} else {
+		xhrobj = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+	return xhrobj;
 }
 
 var APPID = "c9f2e1479f16b3de3f581fbd78940e33";
@@ -21,25 +21,25 @@ var windspeed = document.getElementById('windspeed');
 var windDirection = document.getElementById('windDirection');
 
 send.addEventListener('click', function () {
-    var cityname = document.getElementById('cityname').value;
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityname + '&APPID=' + APPID;
+	var cityname = document.getElementById('cityname').value;
+	var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityname + '&APPID=' + APPID;
 
-    var xhr = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function(){
-        if (xhr.readyState == 4 && xhr.status == 200){
+	xhr.onreadystatechange = function(){
+		if (xhr.readyState == 4 && xhr.status == 200){
 
-            var data = JSON.parse(xhr.responseText);
+			var data = JSON.parse(xhr.responseText);
 
-            selectedcity.innerHTML = data.name;
-            cloudimg.setAttribute('src', 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png');
-            temp.innerHTML = data.main.temp - 273.15;
-            pressure.innerHTML = data.main.pressure;
-            humidity.innerHTML = data.main.humidity;
-            windspeed.innerHTML = data.main.windspeed;
-            windDirection.setAttribute('src', 'http://openweathermap.org/img/w/' + data.weather[1].icon + '.png');
-        }
-    }
-    xhr.open('GET', url, true);
-    xhr.send();
+			selectedcity.innerHTML = data.name;
+			cloudimg.setAttribute('src', 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png');
+			temp.innerHTML = data.main.temp - 273.15;
+			pressure.innerHTML = data.main.pressure;
+			humidity.innerHTML = data.main.humidity;
+			windspeed.innerHTML = data.main.windspeed;
+			windDirection.setAttribute('src', 'http://openweathermap.org/img/w/' + data.weather[1].icon + '.png');
+		}
+	}
+	xhr.open('GET', url, true);
+	xhr.send();
 });
