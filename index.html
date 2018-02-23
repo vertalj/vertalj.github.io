@@ -21,34 +21,34 @@
 
             <form class="col-xl-6 form-inline">
                 <input class="form-control mr-sm-2" type="text" placeholder="Населений пункт">
-                <input class="btn btn-outline-success" type="submit" value="Пошук">
+                <input class="btn btn-outline-success" type="button" id="send" value="Пошук">
             </form>
 
             <div class="col-xl-3">
                 <div class="info">
-                    <h3>Івано-Франківськ</h3><br>
+                    <h3>Погода зараз</h3><br>
 
-                    <div class="temp" title="Температура ⁰С">
-					    <span class="size">1⁰</span>
-			            <img src="assets/images/cloud1.png" alt="Картинка погоди">
+                    <div class="temp">
+                        <span class="size" id="temp" title="Температура ⁰С"></span><span class="size">&deg;</span>
+			            <img id="cloudimg">
 				    </div>
 
                     <table class="slot">
 					    <tr>
-						    <th title="Тиск">720 <span class="unit">мм рт. ст.</span></th>
-						    <th title="Вологість">90 <span class="unit">% волог.</span></th>
+						    <th title="Тиск"><span id="pressure"></span> <span class="unit">hPa</span></th>
+						    <th title="Вологість"><span id="humidity"></span> <span class="unit">%</span></th>
 					    </tr>
 				        <tr>
-					        <th title="Швидкість вітру">4.2 <span class="unit">м/сек</span></th>
-						    <th title="Напрям вітру">--></th>
+					        <th title="Швидкість вітру"><span id="windspeed"></span> <span class="unit">м/сек</span></th>
+						    <th title="Напрям вітру"><img id="windDirection"></th>
 					    </tr>
 				    </table>
                 </div>
             </div>
         </div>
     </header>
-    <article class="container position">
-	    <h5>Івано-Франківськ</h5>
+    <article class="container">
+	    <h5>Обране місто <span id="selectedcity"></span></h5>
 		
         <section class="mynav">
             <ul class="nav nav-tabs justify-content-end">
@@ -485,6 +485,8 @@
             </div>
         </div>
     </footer>
-	
+
+    <script src="script.js"></script>
+
 </body>
 </html>
