@@ -4,489 +4,489 @@
     <meta charset="utf-8">
     <link href="assets/stylesheet/style.css" rel="stylesheet">
     <title>ExactForecast.Прогноз погоди.</title>
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css" media="screen" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-    <header class="container">
-        <div class="row card-header">
-            <div class="col-xl-3">
-                <h1>Exact <br> Forecast</h1>
-			</div>
+<header class="container">
+    <div class="row card-header">
+        <div class="col-xl-3">
+            <h1>Exact <br> Forecast</h1>
+        </div>
 
-            <form class="col-xl-6 form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Населений пункт">
-                <input class="btn btn-outline-success" type="button" id="send" value="Пошук">
-            </form>
+        <form class="col-xl-6 form-inline">
+            <input class="form-control mr-sm-2" type="text" id="cityname" placeholder="Населений пункт">
+            <input class="btn btn-outline-success" type="button" id="send" value="Пошук">
+        </form>
 
-            <div class="col-xl-3">
-                <div class="info">
-                    <h3>Погода зараз</h3><br>
+        <div class="col-xl-3">
+            <div class="info">
+                <h3>Погода зараз</h3><br>
 
-                    <div class="temp">
-                        <span class="size" id="temp" title="Температура ⁰С"></span><span class="size">&deg;</span>
-			            <img id="cloudimg">
-				    </div>
-
-                    <table class="slot">
-					    <tr>
-						    <th title="Тиск"><span id="pressure"></span> <span class="unit">hPa</span></th>
-						    <th title="Вологість"><span id="humidity"></span> <span class="unit">%</span></th>
-					    </tr>
-				        <tr>
-					        <th title="Швидкість вітру"><span id="windspeed"></span> <span class="unit">м/сек</span></th>
-						    <th title="Напрям вітру"><img id="windDirection"></th>
-					    </tr>
-				    </table>
+                <div class="temp">
+                    <span class="size" id="temp" title="Температура ⁰С"></span><span class="size">&deg;</span>
+                    <img id="cloudimg"><!--src="assets/images/cloud1.png" alt="Картинка погоди"-->
                 </div>
+
+                <table class="slot">
+                    <tr>
+                        <th title="Тиск"><span id="pressure"></span> <span class="unit">hPa</span></th>
+                        <th title="Вологість"><span id="humidity"></span> <span class="unit">%</span></th>
+                    </tr>
+                    <tr>
+                        <th title="Швидкість вітру"><span id="windspeed"></span> <span class="unit">м/сек</span></th>
+                        <th title="Напрям вітру"><img id="windDirection"></th>
+                    </tr>
+                </table>
             </div>
         </div>
-    </header>
-    <article class="container">
-	    <h5>Обране місто <span id="selectedcity"></span></h5>
-		
-        <section class="mynav">
-            <ul class="nav nav-tabs justify-content-end">
-                <li class="nav-item">
-					<a class="nav-link active" data-toggle="tab" href="#tab-1">23 лютого</a>
-			    </li>
-                <li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#tab-2">24 лютого</a>
-			    </li>
-                <li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#tab-3">25 лютого</a>
-				</li>
-                <li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#tab-4">26 лютого</a>
-				</li>
-                <li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#tab-5">27 лютого</a>
-				</li>
-            </ul>
-        </section>
-		
-        <section>
-		    <div class="tab-content card-body table border">
-                <table class="tab-pane active container row" id="tab-1">
-                    <tr class="">
-				        <th class="col-xl-1 noborder">Час</th>
-                        <td class="col-xl-1 noborder">2:00</td>
-                        <td class="col-xl-1 noborder">5:00</td>
-                        <td class="col-xl-1 noborder">8:00</td>
-                        <td class="col-xl-1 noborder">11:00</td>
-                        <td class="col-xl-1 noborder">14:00</td>
-                        <td class="col-xl-1 noborder">17:00</td>
-                        <td class="col-xl-1 noborder">20:00</td>
-                        <td class="col-xl-1 noborder">23:00</td>
-                    </tr>
-                    </tr>
-                    <tr>
-				        <th>Хмарність</th>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                    </tr>
-                    <tr>
-				        <th>Температура ⁰С</th>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                    </tr>
-                    <tr>
-				        <th>Тиск, мм</th>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-				        <th>Вологість %</th>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-				        <th>Вітер м/сек</th>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                    </tr>
-                    <tr>
-				        <th>Напрям вітру</th>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                    </tr>
-                </table>
-				<table class="tab-pane container row" id="tab-2">
-                    <tr>
-				        <th class="col-xl-1 noborder">Час</th>
-                        <td class="col-xl-1 noborder">2:00</td>
-                        <td class="col-xl-1 noborder">5:00</td>
-                        <td class="col-xl-1 noborder">8:00</td>
-                        <td class="col-xl-1 noborder">11:00</td>
-                        <td class="col-xl-1 noborder">14:00</td>
-                        <td class="col-xl-1 noborder">17:00</td>
-                        <td class="col-xl-1 noborder">20:00</td>
-                        <td class="col-xl-1 noborder">23:00</td>
-                    </tr>
-                    <tr>
-				        <th>Хмарність</th>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                    </tr>
-                    <tr>
-				        <th>Температура ⁰С</th>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                    </tr>
-                    <tr>
-				        <th>Тиск, мм</th>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-				        <th>Вологість %</th>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-				        <th>Вітер м/сек</th>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                    </tr>
-                    <tr>
-				        <th>Напрям вітру</th>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                    </tr>
-                </table>
-				<table class="tab-pane container row" id="tab-3">
-                    <tr>
-				        <th class="col-xl-1 noborder">Час</th>
-                        <td class="col-xl-1 noborder">2:00</td>
-                        <td class="col-xl-1 noborder">5:00</td>
-                        <td class="col-xl-1 noborder">8:00</td>
-                        <td class="col-xl-1 noborder">11:00</td>
-                        <td class="col-xl-1 noborder">14:00</td>
-                        <td class="col-xl-1 noborder">17:00</td>
-                        <td class="col-xl-1 noborder">20:00</td>
-                        <td class="col-xl-1 noborder">23:00</td>
-                    </tr>
-                    <tr>
-				        <th>Хмарність</th>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                    </tr>
-                    <tr>
-				        <th>Температура ⁰С</th>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                    </tr>
-                    <tr>
-				        <th>Тиск, мм</th>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-				        <th>Вологість %</th>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-				        <th>Вітер м/сек</th>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                    </tr>
-                    <tr>
-				        <th>Напрям вітру</th>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                    </tr>
-                </table>
-				<table class="tab-pane container row" id="tab-4">
-                    <tr>
-				        <th class="col-xl-1 noborder">Час</th>
-                        <td class="col-xl-1 noborder">2:00</td>
-                        <td class="col-xl-1 noborder">5:00</td>
-                        <td class="col-xl-1 noborder">8:00</td>
-                        <td class="col-xl-1 noborder">11:00</td>
-                        <td class="col-xl-1 noborder">14:00</td>
-                        <td class="col-xl-1 noborder">17:00</td>
-                        <td class="col-xl-1 noborder">20:00</td>
-                        <td class="col-xl-1 noborder">23:00</td>
-                    </tr>
-                    <tr>
-				        <th>Хмарність</th>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                    </tr>
-                    <tr>
-				        <th>Температура ⁰С</th>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                    </tr>
-                    <tr>
-				        <th>Тиск, мм</th>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-				        <th>Вологість %</th>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-				        <th>Вітер м/сек</th>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                    </tr>
-                    <tr>
-				        <th>Напрям вітру</th>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                    </tr>
-                </table>
-				<table class="tab-pane container row" id="tab-5">
-                    <tr>
-				        <th class="col-xl-1 noborder">Час</th>
-                        <td class="col-xl-1 noborder">2:00</td>
-                        <td class="col-xl-1 noborder">5:00</td>
-                        <td class="col-xl-1 noborder">8:00</td>
-                        <td class="col-xl-1 noborder">11:00</td>
-                        <td class="col-xl-1 noborder">14:00</td>
-                        <td class="col-xl-1 noborder">17:00</td>
-                        <td class="col-xl-1 noborder">20:00</td>
-                        <td class="col-xl-1 noborder">23:00</td>
-                    </tr>
-                    <tr>
-				        <th>Хмарність</th>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                        <td><img src="assets/images/cloud2.png" alt=""></td>
-                    </tr>
-                    <tr>
-				        <th>Температура ⁰С</th>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                        <td>⁰С</td>
-                    </tr>
-                    <tr>
-				        <th>Тиск, мм</th>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                        <td>720</td>
-                    </tr>
-                    <tr>
-				        <th>Вологість %</th>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-				        <th>Вітер м/сек</th>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                        <td>4.2</td>
-                    </tr>
-                    <tr>
-				        <th>Напрям вітру</th>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                        <td>--></td>
-                    </tr>
-                </table>
-			</div>
-        </section>
+    </div>
+</header>
+<article class="container position">
+    <h5>Обране місто <span id="selectedcity"></span></h5>
 
-    </article>
-	
-    <footer class="container">
-        <div class="row card-footer modal-footer">
-            <div class="col-8 rights">
-                <small>&copy;Exact Forecast. Всі права захищені.</small>
-            </div>
-            <div class="col-4">
-                <!-- Minfin.com.ua region informer 275x120 yellow-->
-                <div id="minfin-informer-m1Fn-region">Загружаем <a href="https://minfin.com.ua/currency/" target="_blank">курсы валют</a> от minfin.com.ua</a></div><script type="text/javascript">var iframe = '<ifra'+'me width="275" height="120" fram'+'eborder="0" src="https://informer.minfin.com.ua/gen/region/0/?color=yellow" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:275px;height:120px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-region';document.getElementById(cl).innerHTML = iframe; </script><noscript><img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курсы валют" title="Курс валют" border="0" /></noscript>
-                <!-- Minfin.com.ua region informer 275x120 yellow-->
-            </div>
+    <section class="mynav">
+        <ul class="nav nav-tabs justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#tab-1">23 лютого</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">24 лютого</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">25 лютого</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">26 лютого</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-5">27 лютого</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="tab-content card-body table border">
+            <table class="tab-pane active container row" id="tab-1">
+                <tr class="">
+                    <th class="col-xl-1 noborder">Час</th>
+                    <td class="col-xl-1 noborder">2:00</td>
+                    <td class="col-xl-1 noborder">5:00</td>
+                    <td class="col-xl-1 noborder">8:00</td>
+                    <td class="col-xl-1 noborder">11:00</td>
+                    <td class="col-xl-1 noborder">14:00</td>
+                    <td class="col-xl-1 noborder">17:00</td>
+                    <td class="col-xl-1 noborder">20:00</td>
+                    <td class="col-xl-1 noborder">23:00</td>
+                </tr>
+                </tr>
+                <tr>
+                    <th>Хмарність</th>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>Температура ⁰С</th>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                </tr>
+                <tr>
+                    <th>Тиск, мм</th>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                </tr>
+                <tr>
+                    <th>Вологість %</th>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <th>Вітер м/сек</th>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <th>Напрям вітру</th>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                </tr>
+            </table>
+            <table class="tab-pane container row" id="tab-2">
+                <tr>
+                    <th class="col-xl-1 noborder">Час</th>
+                    <td class="col-xl-1 noborder">2:00</td>
+                    <td class="col-xl-1 noborder">5:00</td>
+                    <td class="col-xl-1 noborder">8:00</td>
+                    <td class="col-xl-1 noborder">11:00</td>
+                    <td class="col-xl-1 noborder">14:00</td>
+                    <td class="col-xl-1 noborder">17:00</td>
+                    <td class="col-xl-1 noborder">20:00</td>
+                    <td class="col-xl-1 noborder">23:00</td>
+                </tr>
+                <tr>
+                    <th>Хмарність</th>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>Температура ⁰С</th>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                </tr>
+                <tr>
+                    <th>Тиск, мм</th>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                </tr>
+                <tr>
+                    <th>Вологість %</th>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <th>Вітер м/сек</th>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <th>Напрям вітру</th>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                </tr>
+            </table>
+            <table class="tab-pane container row" id="tab-3">
+                <tr>
+                    <th class="col-xl-1 noborder">Час</th>
+                    <td class="col-xl-1 noborder">2:00</td>
+                    <td class="col-xl-1 noborder">5:00</td>
+                    <td class="col-xl-1 noborder">8:00</td>
+                    <td class="col-xl-1 noborder">11:00</td>
+                    <td class="col-xl-1 noborder">14:00</td>
+                    <td class="col-xl-1 noborder">17:00</td>
+                    <td class="col-xl-1 noborder">20:00</td>
+                    <td class="col-xl-1 noborder">23:00</td>
+                </tr>
+                <tr>
+                    <th>Хмарність</th>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>Температура ⁰С</th>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                </tr>
+                <tr>
+                    <th>Тиск, мм</th>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                </tr>
+                <tr>
+                    <th>Вологість %</th>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <th>Вітер м/сек</th>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <th>Напрям вітру</th>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                </tr>
+            </table>
+            <table class="tab-pane container row" id="tab-4">
+                <tr>
+                    <th class="col-xl-1 noborder">Час</th>
+                    <td class="col-xl-1 noborder">2:00</td>
+                    <td class="col-xl-1 noborder">5:00</td>
+                    <td class="col-xl-1 noborder">8:00</td>
+                    <td class="col-xl-1 noborder">11:00</td>
+                    <td class="col-xl-1 noborder">14:00</td>
+                    <td class="col-xl-1 noborder">17:00</td>
+                    <td class="col-xl-1 noborder">20:00</td>
+                    <td class="col-xl-1 noborder">23:00</td>
+                </tr>
+                <tr>
+                    <th>Хмарність</th>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>Температура ⁰С</th>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                </tr>
+                <tr>
+                    <th>Тиск, мм</th>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                </tr>
+                <tr>
+                    <th>Вологість %</th>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <th>Вітер м/сек</th>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <th>Напрям вітру</th>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                </tr>
+            </table>
+            <table class="tab-pane container row" id="tab-5">
+                <tr>
+                    <th class="col-xl-1 noborder">Час</th>
+                    <td class="col-xl-1 noborder">2:00</td>
+                    <td class="col-xl-1 noborder">5:00</td>
+                    <td class="col-xl-1 noborder">8:00</td>
+                    <td class="col-xl-1 noborder">11:00</td>
+                    <td class="col-xl-1 noborder">14:00</td>
+                    <td class="col-xl-1 noborder">17:00</td>
+                    <td class="col-xl-1 noborder">20:00</td>
+                    <td class="col-xl-1 noborder">23:00</td>
+                </tr>
+                <tr>
+                    <th>Хмарність</th>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                    <td><img src="assets/images/cloud2.png" alt=""></td>
+                </tr>
+                <tr>
+                    <th>Температура ⁰С</th>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                    <td>⁰С</td>
+                </tr>
+                <tr>
+                    <th>Тиск, мм</th>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                    <td>720</td>
+                </tr>
+                <tr>
+                    <th>Вологість %</th>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <th>Вітер м/сек</th>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <th>Напрям вітру</th>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                    <td>--></td>
+                </tr>
+            </table>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+</article>
+
+<footer class="container">
+    <div class="row card-footer modal-footer">
+        <div class="col-8 rights">
+            <small>&copy;Exact Forecast. Всі права захищені.</small>
+        </div>
+        <div class="col-4">
+            <!-- Minfin.com.ua region informer 275x120 yellow-->
+            <div id="minfin-informer-m1Fn-region">Загружаем <a href="https://minfin.com.ua/currency/" target="_blank">курсы валют</a> от minfin.com.ua</a></div><script type="text/javascript">var iframe = '<ifra'+'me width="275" height="120" fram'+'eborder="0" src="https://informer.minfin.com.ua/gen/region/0/?color=yellow" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:275px;height:120px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-region';document.getElementById(cl).innerHTML = iframe; </script><noscript><img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курсы валют" title="Курс валют" border="0" /></noscript>
+            <!-- Minfin.com.ua region informer 275x120 yellow-->
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
