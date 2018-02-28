@@ -59,6 +59,7 @@ footer{
 */
 body {
     background-image: url(https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/d/d6/Scenery-hd-wallpaper_1920x1080_88333.jpg/revision/latest?cb=20161021195852);
+    background-size: 100% auto;
     position:fixed;
     top: 0;
     left:0;
