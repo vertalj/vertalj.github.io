@@ -18,7 +18,7 @@ var temp = document.getElementById('temp');
 var pressure = document.getElementById('pressure');
 var humidity = document.getElementById('humidity');
 var windspeed = document.getElementById('windspeed');
-var windDirection = document.getElementById('windDirection');
+var cloudsall = document.getElementById('cloudsall');
 
 send.addEventListener('click', function () {
 	var cityname = document.getElementById('cityname').value;
@@ -36,8 +36,8 @@ send.addEventListener('click', function () {
 			temp.innerHTML = data.main.temp - 273.15;
 			pressure.innerHTML = data.main.pressure;
 			humidity.innerHTML = data.main.humidity;
-			windspeed.innerHTML = data.main.windspeed;
-			windDirection.setAttribute('src', 'http://openweathermap.org/img/w/' + data.weather[1].icon + '.png');
+			windspeed.innerHTML = data.wind.speed;
+			cloudsall.innerHTML = data.clouds.all;
 		}
 	}
 	xhr.open('GET', url, true);
