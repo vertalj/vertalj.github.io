@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="676">
-              <caret line="42" column="62" lean-forward="false" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+              <caret line="42" column="82" lean-forward="false" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
               <folding>
                 <element signature="e#1420#1425#1" expanded="true" />
                 <element signature="n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -206,7 +206,7 @@
       <workItem from="1519124514368" duration="1756000" />
       <workItem from="1519233283853" duration="267000" />
       <workItem from="1519410394876" duration="2358000" />
-      <workItem from="1519819706194" duration="8218000" />
+      <workItem from="1519819706194" duration="8309000" />
     </task>
     <task id="LOCAL-00001" summary="Add padding and border-top to table, changed .list font-size from 20px to 15px">
       <created>1518473337051</created>
@@ -313,11 +313,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519828401103</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Weather">
+      <created>1519844600017</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519844600017</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29877000" />
+    <option name="totallyTimeSpent" value="29968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="327" y="62" width="1390" height="973" extended-state="0" />
@@ -784,7 +791,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
-          <caret line="42" column="62" lean-forward="false" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+          <caret line="42" column="82" lean-forward="false" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
           <folding>
             <element signature="e#1420#1425#1" expanded="true" />
             <element signature="n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="false" />
