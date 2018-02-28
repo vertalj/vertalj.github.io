@@ -121,11 +121,11 @@ th, td {
    Футер
 */
 footer {
-	padding-top: 80px;
 	height: 80px !important;
 }
 .rights {
 	padding-top: 30px;
+    text-align: center;
 }
 .card-footer {
 	background-color:  rgba(198, 198, 198, 0.49) !important;
