@@ -110,3 +110,13 @@ body {
 .nav-link {
     color: #000 !important;
 }
+
+
+/*
+  Google map
+*/
+iframe {
+    width: 400px;
+    height: 300px;
+    border-style: none;
+}
