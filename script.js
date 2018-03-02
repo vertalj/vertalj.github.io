@@ -22,7 +22,7 @@ var cloudsall = document.getElementById('cloudsall');
 
 send.addEventListener('click', function () {
 	var cityname = document.getElementById('cityname').value;
-	var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityname + '&APPID=' + APPID;
+	var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityname + '&APPID=' + APPID;
 
 	var xhr = new XMLHttpRequest();
 
@@ -32,7 +32,7 @@ send.addEventListener('click', function () {
 			var data = JSON.parse(xhr.responseText);
 
 			selectedcity.innerHTML = data.name;
-			cloudimg.setAttribute('src', 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png');
+			cloudimg.setAttribute('src', 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png');
 			temp.innerHTML = data.main.temp - 273.15;
 			pressure.innerHTML = data.main.pressure;
 			humidity.innerHTML = data.main.humidity;

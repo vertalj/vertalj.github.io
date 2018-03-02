@@ -37,45 +37,44 @@ footer{
 .skills {
     margin-top: 60px;
 }
-.firstpage {
-    padding-top: 350px;
+#tab1 {
+    position: absolute;
+    top: 40%;
+    right: 44%;
 }
 #tab2 {
-    padding-top: 180px;
+    position: absolute;
+    top: 25%;
+    right: 30%;
+}
+#tab3 {
+    position: absolute;
+    top: 25%;
+    right: 21%;
 }
 #tab4 {
-    padding-top: 150px;
+    position: absolute;
+    top: 25%;
+    right: 18%;
 }
 .space {
     padding-top: 50px;
 }
-.portfolio {
-    padding-top: 250px;
-}
+
 
 
 /*
    Images
 */
-body {
-    background: url(https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/d/d6/Scenery-hd-wallpaper_1920x1080_88333.jpg/revision/latest?cb=20161021195852) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 .image1 {
-    content: url(http://res.cloudinary.com/dxv7yekoe/image/upload/v1519680487/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_6.png);
     width: 300px;
     height: 100%;
 }
 .image2 {
-    content: url(http://res.cloudinary.com/dxv7yekoe/image/upload/v1519680491/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_4.png);
     width: 300px;
     height: 100%;
 }
 .image0 {
-    content: url(http://res.cloudinary.com/dxv7yekoe/image/upload/v1519579266/image-0-02-01-1cd4b9b6e0c0b4780b05f4d3eaece2a7dac7bbc08ebe3fe36e4c81dba35ae975-V.jpg);
     width: 300px;
     height: 100%;
 }
@@ -107,6 +106,9 @@ body {
 }
 .nav-link {
     color: #000 !important;
+}
+header {
+    background-color: #5a6268;
 }
 
 
