@@ -33,7 +33,7 @@ send.addEventListener('click', function () {
 
 			selectedcity.innerHTML = data.name;
 			cloudimg.setAttribute('src', 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png');
-			temp.innerHTML = data.main.temp - 273.15;
+			temp.innerHTML = data.main.temp.toFixed(0) - 273.15;
 			pressure.innerHTML = data.main.pressure;
 			humidity.innerHTML = data.main.humidity;
 			windspeed.innerHTML = data.wind.speed;
